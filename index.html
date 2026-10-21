@@ -60,6 +60,9 @@ header.solido{background:rgba(244,239,234,.94);backdrop-filter:blur(10px);box-sh
 .hero h1{font-size:clamp(3rem,7vw,6rem);margin:1.2rem 0 1.6rem}
 .hero p{max-width:30rem;font-size:1.05rem;margin-bottom:2.6rem}
 .hero .acoes{display:flex;gap:1rem;flex-wrap:wrap}
+.destaques{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin:-.6rem 0 2.2rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--cafe)}
+.destaques li{padding-left:1.1rem;position:relative}
+.destaques li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:1px;background:var(--terracota)}
 .hero-foto{position:relative;overflow:hidden}
 .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:zoom 14s ease-out both}
 @keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
@@ -107,7 +110,20 @@ section{padding:clamp(80px,11vw,150px) 0}
 .nota-pacotes{text-align:center;margin-top:3.4rem;font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--cafe)}
 
 /* portfolio */
-.filtros{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.pastas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.pasta{position:relative;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;border:0;padding:0;cursor:pointer;background:var(--cafe);text-align:left}
+.pasta img{width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:transform .8s,filter .4s}
+.pasta:hover img,.pasta:focus-visible img{transform:scale(1.05);filter:brightness(.6)}
+.pasta .txt{position:absolute;left:0;right:0;bottom:0;padding:3rem 1.6rem 1.4rem;color:var(--creme);background:linear-gradient(transparent,rgba(30,23,20,.88))}
+.pasta .txt b{display:block;font:400 1.75rem/1.1 var(--serif)}
+.pasta .txt small{display:block;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.pasta .txt em{display:block;margin-top:.7rem;font:500 .68rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:var(--bege);transition:.3s}
+.pasta:hover .txt em{color:var(--creme);letter-spacing:.26em}
+.album[hidden]{display:none}
+.album-topo{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem;padding-bottom:1.2rem;border-bottom:1px solid var(--bege)}
+.album-topo h3{font-size:2.2rem}
+.voltar{background:none;border:0;cursor:pointer;font:500 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--cafe);padding:.6em 0;transition:.3s}
+.voltar:hover{color:var(--terracota)}
 .filtros button{background:none;border:1px solid var(--bege);padding:.7em 1.3em;font:500 .7rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--texto);cursor:pointer;transition:.25s}
 .filtros button:hover{border-color:var(--cafe)}
 .filtros button.ativo{background:var(--cafe);border-color:var(--cafe);color:var(--creme)}
@@ -203,6 +219,10 @@ footer{background:var(--tinta);color:var(--bege);padding:3.4rem 0 2.2rem;font-si
 }
 @media (max-width:600px){
   .cards,.passos{grid-template-columns:1fr}
+  .pastas{grid-template-columns:1fr 1fr;gap:.8rem}
+  .pasta .txt{padding:2rem 1rem 1rem}
+  .pasta .txt b{font-size:1.3rem}
+  .pasta .txt em{display:none}
   .galeria{columns:2;column-gap:8px}
   .galeria a{margin-bottom:8px}
   .hero .btn{width:100%;justify-content:center}
@@ -236,8 +256,13 @@ footer{background:var(--tinta);color:var(--bege);padding:3.4rem 0 2.2rem;font-si
   <div class="hero-txt">
     <img class="mono" src="img/marca/gm-terracota.png" alt="">
     <span class="eyebrow">Fotógrafa &amp; Videomaker · São Paulo</span>
-    <h1>Sua noite,<br>do jeito que <em>foi</em>.</h1>
-    <p>Festas, festivais e eventos de música eletrônica com a energia do momento. Fotos, stories em tempo real, reels e imagens aéreas.</p>
+    <h1>Gabi Monteiro</h1>
+    <p>Fotografo e filmo festas, festivais e eventos de música eletrônica em São Paulo, com a energia do momento preservada.</p>
+    <ul class="destaques">
+      <li>Festas e festivais</li>
+      <li>Stories em tempo real</li>
+      <li>Fotos e vídeos com drone</li>
+    </ul>
     <div class="acoes">
       <a class="btn btn-cheio" data-zap="Olá, Gabi! Vim pelo seu site e gostaria de fazer um orçamento." href="#">
         <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-zap"/></svg>Pedir orçamento</a>
@@ -245,7 +270,7 @@ footer{background:var(--tinta);color:var(--bege);padding:3.4rem 0 2.2rem;font-si
     </div>
   </div>
   <div class="hero-foto">
-    <img src="img/fotos/eventos/09.jpg" alt="Pessoa dançando em festa de música eletrônica com luz laranja" fetchpriority="high">
+    <img src="img/gabi/luz.jpg" alt="Gabi Monteiro com câmera e luz de estúdio" fetchpriority="high">
   </div>
 </section>
 
@@ -287,9 +312,15 @@ footer{background:var(--tinta);color:var(--bege);padding:3.4rem 0 2.2rem;font-si
       <div><span class="eyebrow">Portfólio</span><h2>Festas <em>recentes</em></h2></div>
       <p>Algumas das festas que cobri. Toque em uma foto para ver em tela cheia.</p>
     </div>
-    <div class="filtros" id="filtros" role="tablist" aria-label="Categorias do portfólio"></div>
-    <div class="galeria" id="galeria"></div>
-    <div class="mais"><button class="btn btn-linha" id="ver-mais" type="button">Ver mais fotos</button></div>
+    <div class="pastas" id="pastas"></div>
+    <div class="album" id="album" hidden>
+      <div class="album-topo">
+        <button class="voltar" id="voltar" type="button">← Todas as pastas</button>
+        <h3 id="album-titulo"></h3>
+      </div>
+      <div class="galeria" id="galeria"></div>
+      <div class="mais"><button class="btn btn-linha" id="ver-mais" type="button">Ver mais fotos</button></div>
+    </div>
   </div>
 </section>
 
@@ -414,21 +445,33 @@ document.getElementById('cards').innerHTML = SERVICOS.map((s, i) => `
 
 // portfólio
 const POR_PAGINA = 12;
-const filtros = document.getElementById('filtros');
+const pastas = document.getElementById('pastas');
+const album = document.getElementById('album');
+const albumTitulo = document.getElementById('album-titulo');
 const galeria = document.getElementById('galeria');
 const verMais = document.getElementById('ver-mais');
 let atual = [], mostrando = 0;
 
-filtros.innerHTML = CATEGORIAS.map(([id, nome], i) =>
-  `<button type="button" role="tab" data-cat="${id}" aria-selected="${i === 0}" class="${i === 0 ? 'ativo' : ''}">${nome}</button>`).join('');
+pastas.innerHTML = CATEGORIAS.map(([id, nome]) => {
+  const n = (window.FOTOS[id] || []).length;
+  return `<button type="button" class="pasta rv" data-cat="${id}">
+    <img src="img/thumbs/${id}/01.jpg" alt="" loading="lazy">
+    <span class="txt"><b>${nome}</b><small>${n} fotos</small><em>Abrir pasta →</em></span>
+  </button>`;
+}).join('');
 
 function abrirCategoria(cat) {
-  filtros.querySelectorAll('button').forEach(b => {
-    const on = b.dataset.cat === cat; b.classList.toggle('ativo', on); b.setAttribute('aria-selected', on);
-  });
   const nome = CATEGORIAS.find(c => c[0] === cat)[1];
   atual = (window.FOTOS[cat] || []).map(([arq, w, h]) => ({ thumb:`img/thumbs/${cat}/${arq}`, full:`img/fotos/${cat}/${arq}`, w, h, alt:`${nome}, foto de Gabi Monteiro` }));
+  albumTitulo.textContent = nome;
+  pastas.hidden = true; album.hidden = false;
   galeria.innerHTML = ''; mostrando = 0; renderizar();
+  album.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+function voltarPastas() {
+  album.hidden = true; pastas.hidden = false;
+  pastas.scrollIntoView({ behavior:'smooth', block:'start' });
 }
 
 function renderizar() {
@@ -446,7 +489,8 @@ function renderizar() {
   verMais.parentElement.style.display = mostrando < atual.length ? '' : 'none';
 }
 
-filtros.addEventListener('click', e => { const b = e.target.closest('button'); if (b) abrirCategoria(b.dataset.cat); });
+pastas.addEventListener('click', e => { const b = e.target.closest('.pasta'); if (b) abrirCategoria(b.dataset.cat); });
+document.getElementById('voltar').addEventListener('click', voltarPastas);
 verMais.addEventListener('click', renderizar);
 
 // lightbox
@@ -480,7 +524,6 @@ menuBtn.onclick = () => { const a = menu.classList.toggle('aberto'); menuBtn.set
 menu.addEventListener('click', e => { if (e.target.tagName === 'A') { menu.classList.remove('aberto'); menuBtn.setAttribute('aria-expanded', false); } });
 
 document.getElementById('ano').textContent = new Date().getFullYear();
-abrirCategoria('eventos');
 </script>
 </body>
 </html>
