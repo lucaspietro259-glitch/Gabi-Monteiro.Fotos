@@ -303,8 +303,8 @@ footer{background:var(--tinta);color:var(--bege);padding:3.4rem 0 2.2rem;font-si
 <section id="portfolio">
   <div class="wrap">
     <div class="topo rv">
-      <div><span class="eyebrow">Portfólio</span><h2>Festas <em>recentes</em></h2></div>
-      <p>Algumas das festas que cobri. Toque em uma foto para ver em tela cheia.</p>
+      <div><span class="eyebrow">Portfólio</span><h2>Eventos <em>recentes</em></h2></div>
+      <p>Algumas das festas e eventos que cobri. Toque em uma foto para ver em tela cheia.</p>
     </div>
     <div class="pastas" id="pastas"></div>
     <div class="album" id="album" hidden>
@@ -450,7 +450,7 @@ pastas.innerHTML = CATEGORIAS.map(([id, nome]) => {
   const n = (window.FOTOS[id] || []).length;
   return `<button type="button" class="pasta rv" data-cat="${id}">
     <img src="img/thumbs/${id}/01.jpg" alt="" loading="lazy">
-    <span class="txt"><b>${nome}</b><small>${n} fotos</small><em>Abrir pasta →</em></span>
+    <span class="txt"><b>${nome}</b><em>Abrir pasta →</em></span>
   </button>`;
 }).join('');
 
