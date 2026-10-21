@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabi Monteiro Fotos | Fotógrafa e Videomaker em São Paulo</title>
+<meta name="description" content="Gabi Monteiro, fotógrafa e videomaker em São Paulo. Ensaios externos e em estúdio, cobertura de eventos, casamentos, story maker, vídeo maker e drone.">
+<meta property="og:title" content="Gabi Monteiro Fotos">
+<meta property="og:description" content="Fotógrafa e videomaker. Ensaios, eventos, casamentos, stories, reels e drone.">
+<meta property="og:image" content="img/gabi/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4EFEA">
+<link rel="icon" href="img/marca/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#F4EFEA; --bege:#DCD3CC; --areia:#E9E1DA;
+  --terracota:#632E1E; --cafe:#471C0F; --tinta:#1E1714; --texto:#4A3F3A;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Montserrat',system-ui,sans-serif;
+  --max:1240px; --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--texto);font-family:var(--sans);font-weight:300;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--terracota)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--tinta);line-height:1.08}
+h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+h2 em,h1 em{font-style:italic;color:var(--terracota)}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1em 2em;font:500 .74rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--cafe);transition:.3s}
+.btn-cheio{background:var(--cafe);color:var(--creme)}
+.btn-cheio:hover{background:var(--terracota);border-color:var(--terracota)}
+.btn-linha{color:var(--cafe)}
+.btn-linha:hover{background:var(--cafe);color:var(--creme)}
+.btn svg{width:16px;height:16px}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:.35s}
+header.solido{background:rgba(244,239,234,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(71,28,15,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.marca{display:flex;align-items:center;gap:.8rem;color:var(--cafe)}
+.marca img{height:38px;width:auto}
+.marca span{font-size:.78rem;letter-spacing:.3em;font-weight:300;white-space:nowrap}
+.marca b{font-weight:600}
+.rodape .marca{color:var(--bege)}
+.nav ul{display:flex;gap:2.2rem;list-style:none}
+.nav ul a{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--cafe);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--terracota);transition:.3s}
+.nav ul a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;color:var(--cafe)}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch}
+.hero-txt{display:flex;flex-direction:column;justify-content:center;padding:120px var(--gut) 80px max(var(--gut),calc((100vw - var(--max))/2 + var(--gut)))}
+.hero-txt .mono{width:92px;margin-bottom:2.2rem;opacity:.9}
+.hero h1{font-size:clamp(3rem,7vw,6rem);margin:1.2rem 0 1.6rem}
+.hero p{max-width:30rem;font-size:1.05rem;margin-bottom:2.6rem}
+.hero .acoes{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-foto{position:relative;overflow:hidden}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:zoom 14s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-foto .selo{position:absolute;left:28px;bottom:28px;color:var(--creme);font-family:var(--serif);font-style:italic;font-size:1.3rem;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+
+/* faixa */
+.faixa{background:var(--cafe);color:var(--bege);overflow:hidden;padding:1.1rem 0;white-space:nowrap}
+.faixa div{display:inline-block;animation:corre 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.35rem}
+.faixa span{margin:0 1.6rem;opacity:.5;font-style:normal}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+section{padding:clamp(80px,11vw,150px) 0}
+
+/* sobre */
+.sobre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.sobre-fotos{position:relative;padding:0 12% 14% 0}
+.sobre-fotos .f1{aspect-ratio:2/3;object-fit:cover;width:100%}
+.sobre-fotos .f2{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:2/3;object-fit:cover;border:10px solid var(--creme)}
+.sobre-txt h2{margin:1rem 0 1.8rem}
+.sobre-txt p{margin-bottom:1.2rem;max-width:34rem}
+.assinatura{font-family:var(--serif);font-style:italic;font-size:2rem;color:var(--terracota);margin-top:1.6rem}
+
+/* servicos */
+.servicos{background:var(--areia)}
+.topo{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+.topo h2{margin-top:1rem}
+.topo p{max-width:26rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.card{background:var(--creme);display:flex;flex-direction:column;transition:.4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(71,28,15,.35)}
+.card .img{aspect-ratio:4/3;overflow:hidden}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:1s}
+.card:hover .img img{transform:scale(1.05)}
+.card .corpo{padding:2rem 2rem 2.2rem;display:flex;flex-direction:column;flex:1}
+.card .num{font-family:var(--serif);font-style:italic;color:var(--terracota);font-size:1.1rem}
+.card h3{font-size:1.9rem;margin:.3rem 0 .4rem}
+.card .sub{font-size:.88rem;margin-bottom:1.2rem}
+.card ul{list-style:none;font-size:.86rem;margin-bottom:1.8rem;flex:1}
+.card li{padding:.45rem 0;border-bottom:1px solid var(--areia);display:flex;gap:.7rem}
+.card li::before{content:"—";color:var(--terracota)}
+.card .consultar{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--cafe);display:inline-flex;gap:.6rem;align-items:center}
+.card .consultar:hover{color:var(--terracota)}
+.card .consultar::after{content:"→";transition:.3s}
+.card:hover .consultar::after{transform:translateX(5px)}
+.nota-pacotes{text-align:center;margin-top:3.4rem;font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--cafe)}
+
+/* portfolio */
+.filtros{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.filtros button{background:none;border:1px solid var(--bege);padding:.7em 1.3em;font:500 .7rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--texto);cursor:pointer;transition:.25s}
+.filtros button:hover{border-color:var(--cafe)}
+.filtros button.ativo{background:var(--cafe);border-color:var(--cafe);color:var(--creme)}
+.galeria{columns:3 300px;column-gap:14px}
+.galeria a{display:block;margin-bottom:14px;break-inside:avoid;overflow:hidden;background:var(--bege);position:relative;cursor:zoom-in;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.galeria a.on{opacity:1;transform:none}
+.galeria img{width:100%;height:auto;transition:transform .8s}
+.galeria a:hover img{transform:scale(1.04)}
+.mais{text-align:center;margin-top:3rem}
+
+/* processo */
+.processo{background:var(--cafe);color:var(--bege)}
+.processo h2{color:var(--creme)}
+.processo .eyebrow{color:var(--bege)}
+.processo h2 em{color:var(--bege)}
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:2.4rem;margin-top:4rem}
+.passo{border-top:1px solid rgba(220,211,204,.3);padding-top:1.8rem}
+.passo .n{font-family:var(--serif);font-style:italic;font-size:3rem;color:var(--bege);line-height:1;opacity:.7}
+.passo h3{color:var(--creme);font-size:1.6rem;margin:1rem 0 .7rem}
+.passo p{font-size:.9rem}
+
+/* infos */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:center}
+.infos-foto{aspect-ratio:4/5;object-fit:cover;width:100%}
+.infos-lista{margin-top:2.4rem;display:grid;gap:0}
+.info{display:grid;grid-template-columns:52px 1fr;gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid var(--bege)}
+.info svg{width:30px;height:30px;color:var(--terracota);stroke-width:1.2}
+.info h3{font-family:var(--sans);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--cafe);margin-bottom:.35rem}
+.info p{font-size:.93rem}
+
+/* contato */
+.contato{position:relative;color:var(--creme);text-align:center;padding:clamp(110px,16vw,200px) 0;overflow:hidden}
+.contato .bg{position:absolute;inset:0;background:url(img/gabi/contato.jpg) center 35%/cover}
+.contato .bg::after{content:"";position:absolute;inset:0;background:rgba(30,23,20,.66)}
+.contato .wrap{position:relative}
+.contato img.mono{width:80px;margin:0 auto 2rem}
+.contato h2{color:var(--creme);margin-bottom:1.4rem}
+.contato h2 em{color:var(--bege)}
+.contato p{max-width:34rem;margin:0 auto 2.6rem;color:var(--bege)}
+.contato .acoes{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.contato .btn-cheio{background:var(--creme);color:var(--cafe);border-color:var(--creme)}
+.contato .btn-cheio:hover{background:var(--bege);border-color:var(--bege)}
+.contato .btn-linha{border-color:var(--creme);color:var(--creme)}
+.contato .btn-linha:hover{background:var(--creme);color:var(--cafe)}
+
+footer{background:var(--tinta);color:var(--bege);padding:3.4rem 0 2.2rem;font-size:.82rem}
+.rodape{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.rodape nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+.rodape nav a:hover{color:var(--creme)}
+.copy{margin-top:2.2rem;padding-top:1.6rem;border-top:1px solid rgba(220,211,204,.15);font-size:.72rem;letter-spacing:.06em;opacity:.65;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* whatsapp flutuante */
+.zap{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.4);transition:.3s}
+.zap:hover{transform:scale(1.08)}
+.zap svg{width:30px;height:30px;color:#fff}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,15,13,.96);display:none;align-items:center;justify-content:center}
+.lb.aberto{display:flex}
+.lb img{max-width:92vw;max-height:88vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb button{position:absolute;background:none;border:0;color:var(--bege);cursor:pointer;padding:14px;opacity:.8}
+.lb button:hover{opacity:1}
+.lb svg{width:32px;height:32px}
+.lb .fechar{top:12px;right:12px}
+.lb .ant{left:8px;top:50%;transform:translateY(-50%)}
+.lb .prox{right:8px;top:50%;transform:translateY(-50%)}
+.lb .cont{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:var(--bege);font-size:.72rem;letter-spacing:.24em}
+
+/* revelar */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.on{opacity:1;transform:none}
+
+@media (max-width:1024px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .passos{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .nav{height:70px}
+  .nav ul{position:fixed;inset:70px 0 auto;flex-direction:column;gap:0;background:var(--creme);padding:1rem var(--gut) 2rem;box-shadow:0 20px 30px -20px rgba(0,0,0,.2);transform:translateY(-130%);transition:.4s;z-index:-1}
+  .nav ul.aberto{transform:none}
+  .nav ul a{display:block;padding:1rem 0;border-bottom:1px solid var(--bege)}
+  .menu-btn{display:block}
+  .nav .nav-cta{display:none}
+  header{background:rgba(244,239,234,.96)}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-foto{order:-1;height:72vh;margin-top:70px}
+  .hero-txt{padding:3rem var(--gut) 4rem}
+  .hero-txt .mono{display:none}
+  .sobre-grid,.infos-grid{grid-template-columns:1fr}
+  .infos-foto{aspect-ratio:3/2}
+}
+@media (max-width:600px){
+  .cards,.passos{grid-template-columns:1fr}
+  .galeria{columns:2;column-gap:8px}
+  .galeria a{margin-bottom:8px}
+  .hero .btn{width:100%;justify-content:center}
+    .filtros{flex-wrap:nowrap;overflow-x:auto;margin-left:calc(var(--gut)*-1);margin-right:calc(var(--gut)*-1);padding:0 var(--gut) 6px;scrollbar-width:none}
+  .filtros button{flex:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.galeria a{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header id="topo">
+  <div class="wrap nav">
+    <a href="#inicio" class="marca" aria-label="Gabi Monteiro Fotos, início"><img src="img/marca/gm-terracota.png" alt=""><span>GABI MONTEIRO <b>FOTOS</b></span></a>
+    <ul id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn btn-cheio nav-cta" data-zap="Olá, Gabi! Vim pelo seu site e gostaria de fazer um orçamento." href="#">Orçamento</a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio" style="padding:0">
+  <div class="hero-txt">
+    <img class="mono" src="img/marca/gm-terracota.png" alt="">
+    <span class="eyebrow">Fotógrafa &amp; Videomaker · São Paulo</span>
+    <h1>Momentos reais,<br>contados com <em>luz</em>.</h1>
+    <p>Ensaios, eventos e casamentos registrados de forma natural e elegante. Fotos, stories em tempo real, reels e imagens aéreas para guardar o que importa.</p>
+    <div class="acoes">
+      <a class="btn btn-cheio" data-zap="Olá, Gabi! Vim pelo seu site e gostaria de fazer um orçamento." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-zap"/></svg>Pedir orçamento</a>
+      <a class="btn btn-linha" href="#portfolio">Ver portfólio</a>
+    </div>
+  </div>
+  <div class="hero-foto">
+    <img src="img/gabi/hero.jpg" alt="Gabi Monteiro segurando sua câmera sob luz dourada" fetchpriority="high">
+    <span class="selo">Prazer, Gabi.</span>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"><div>
+  Ensaio externo<span>✦</span>Ensaio em estúdio<span>✦</span>Cobertura de eventos<span>✦</span>Casamentos<span>✦</span>Story maker<span>✦</span>Video maker<span>✦</span>Drone<span>✦</span>
+  Ensaio externo<span>✦</span>Ensaio em estúdio<span>✦</span>Cobertura de eventos<span>✦</span>Casamentos<span>✦</span>Story maker<span>✦</span>Video maker<span>✦</span>Drone<span>✦</span>
+</div></div>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-fotos rv">
+      <img class="f1" src="img/gabi/sobre.jpg" alt="Retrato em preto e branco da fotógrafa Gabi Monteiro" loading="lazy">
+      <img class="f2" src="img/gabi/luz.jpg" alt="Gabi ajustando a câmera ao lado de uma luminária" loading="lazy">
+    </div>
+    <div class="sobre-txt rv">
+      <span class="eyebrow">Sobre mim</span>
+      <h2>Prazer, <em>Gabi</em>.</h2>
+      <p>Sou fotógrafa e videomaker e acredito que as melhores imagens nascem quando a pessoa se sente à vontade. Por isso conduzo cada ensaio com leveza, ajudando nas poses e deixando espaço para o que é espontâneo.</p>
+      <p>Fotografo ensaios pessoais, corporativos, gestantes e aniversários, além de festas, casamentos civis, eventos de marca, festivais e encontros de wellness. Em cada trabalho, o objetivo é o mesmo: entregar fotos que tenham a sua cara.</p>
+      <div class="assinatura">Gabi Monteiro</div>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="wrap">
+    <div class="topo rv">
+      <div><span class="eyebrow">O que eu ofereço</span><h2>Serviços <em>pensados</em><br>para cada momento</h2></div>
+      <p>Escolha o formato que combina com você. Os valores e pacotes atualizados são enviados pelo WhatsApp, junto com a disponibilidade de datas.</p>
+    </div>
+    <div class="cards" id="cards"></div>
+    <p class="nota-pacotes rv">Pacotes Essencial, Plus e Premium para ensaios e drone. Peça os valores pelo WhatsApp.</p>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="topo rv">
+      <div><span class="eyebrow">Portfólio</span><h2>Alguns <em>trabalhos</em></h2></div>
+      <p>Uma seleção de ensaios e eventos recentes. Toque em uma foto para ver em tela cheia.</p>
+    </div>
+    <div class="filtros" id="filtros" role="tablist" aria-label="Categorias do portfólio"></div>
+    <div class="galeria" id="galeria"></div>
+    <div class="mais"><button class="btn btn-linha" id="ver-mais" type="button">Ver mais fotos</button></div>
+  </div>
+</section>
+
+<section class="processo" id="como-funciona">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Prazos &amp; entregas</span><h2>Como <em>funciona</em></h2></div>
+    <div class="passos">
+      <div class="passo rv"><div class="n">01</div><h3>Prévia do ensaio</h3><p>Enviada em até 3 dias úteis após o ensaio, para você escolher as fotos favoritas.</p></div>
+      <div class="passo rv"><div class="n">02</div><h3>Entrega final dos ensaios</h3><p>As fotos escolhidas são tratadas e entregues em até 10 dias úteis após a seleção da prévia.</p></div>
+      <div class="passo rv"><div class="n">03</div><h3>Entrega final dos eventos</h3><p>Todas as fotos do evento entregues em até 7 dias úteis.</p></div>
+      <div class="passo rv"><div class="n">04</div><h3>Galeria online</h3><p>Fotos entregues em uma galeria digital para download. Fácil, rápido e organizado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="informacoes">
+  <div class="wrap infos-grid">
+    <div class="rv">
+      <span class="eyebrow">Bom saber</span>
+      <h2>Informações <em>importantes</em></h2>
+      <div class="infos-lista">
+        <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><h3>Dias de atendimento</h3><p>Ensaios e eventos realizados aos sábados e domingos.</p></div></div>
+        <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg><div><h3>Reserva de data</h3><p>O pagamento do sinal confirma e reserva a sua data.</p></div></div>
+        <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="13" rx="1.5"/><path d="M2 10h20M6 15h4"/></svg><div><h3>Parcelamento</h3><p>O valor restante, pago no dia, pode ser parcelado em até 12x com taxa.</p></div></div>
+        <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>Cancelamento</h3><p>O sinal não é reembolsável em caso de cancelamento.</p></div></div>
+        <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><div><h3>Fotos extras</h3><p>Gostou de mais fotos do que o pacote inclui? Dá para adicionar fotos extras ao ensaio.</p></div></div>
+      </div>
+    </div>
+    <img class="infos-foto rv" src="img/gabi/camera.jpg" alt="Detalhe das mãos de Gabi segurando a câmera" loading="lazy">
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wrap rv">
+    <img class="mono" src="img/marca/gm-branco.png" alt="">
+    <h2>Vamos criar algo <em>lindo</em> juntos?</h2>
+    <p>Me conte o que você imagina: tipo de ensaio ou evento, data e local. Eu respondo com os pacotes, valores atualizados e a disponibilidade da agenda.</p>
+    <div class="acoes">
+      <a class="btn btn-cheio" data-zap="Olá, Gabi! Vim pelo seu site e gostaria de fazer um orçamento." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-zap"/></svg>Falar no WhatsApp</a>
+      <a class="btn btn-linha" href="https://www.instagram.com/gabimonteirofotos/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><use href="#i-insta"/></svg>@gabimonteirofotos</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rodape">
+      <a href="#inicio" class="marca" aria-label="Gabi Monteiro Fotos"><img src="img/marca/gm-bege.png" alt=""><span>GABI MONTEIRO <b>FOTOS</b></span></a>
+      <nav aria-label="Rodapé">
+        <a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a>
+        <a href="https://www.instagram.com/gabimonteirofotos/" target="_blank" rel="noopener">Instagram</a>
+        <a data-zap="Olá, Gabi! Vim pelo seu site." href="#">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="copy"><span>© <span id="ano"></span> Gabi Monteiro Fotos. Todas as fotos são protegidas por direitos autorais.</span><span>São Paulo · SP</span></div>
+  </div>
+</footer>
+
+<a class="zap" data-zap="Olá, Gabi! Vim pelo seu site e gostaria de fazer um orçamento." href="#" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-zap"/></svg>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto em tela cheia">
+  <button class="fechar" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <button class="ant" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4l-8 8 8 8"/></svg></button>
+  <img alt="">
+  <button class="prox" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4l8 8-8 8"/></svg></button>
+  <div class="cont"></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.46 9.46 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47a9.4 9.4 0 0 1 6.7 2.78 9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.45-9.47 9.45zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2 .53 3.96 1.52 5.69L.55 23.6l6.03-1.58a11.36 11.36 0 0 0 5.45 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.34-8.05z"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></symbol>
+</svg>
+
+<script src="fotos.js"></script>
+<script>
+const ZAP = '5511975492000';
+const linkZap = msg => 'https://wa.me/' + ZAP + '?text=' + encodeURIComponent(msg);
+
+const SERVICOS = [
+  { titulo:'Ensaio externo', sub:'Parques, cafeterias ou o seu local de trabalho.', img:'img/fotos/retrato/03.jpg',
+    itens:['Pacotes de 25, 35 ou 45 fotos editadas','2 horas de ensaio','De 2 a 3 trocas de look','Reels de bastidores no Premium'] },
+  { titulo:'Ensaio em estúdio', sub:'Em estúdios parceiros perto da sua região.', img:'img/fotos/corporativo/04.jpg',
+    itens:['Pacotes de 25, 35 ou 45 fotos editadas','2 horas de ensaio','De 2 a 3 trocas de look','Reels de bastidores no Premium'] },
+  { titulo:'Cobertura de eventos', sub:'Aniversários, corporativos, casamentos civis, lançamentos e palestras.', img:'img/fotos/casamentos/05.jpg',
+    itens:['Cobertura de até 5 horas','Registro espontâneo e natural','Todas as fotos entregues por link digital'] },
+  { titulo:'Story maker', sub:'Cobertura em tempo real para os Stories do Instagram.', img:'img/fotos/wellness/16.jpg',
+    itens:['Mínimo de 15 stories entregues','iPhone 17 Pro e câmera Canon profissional','Ideal para eventos, casamentos e aniversários'] },
+  { titulo:'Video maker', sub:'Captação dos momentos especiais e edição em estilo reels.', img:'img/gabi/iphone.jpg',
+    itens:['Captação com iPhone 17 Pro e câmera Canon','1 vídeo editado estilo reels','Duração média de 2 minutos'] },
+  { titulo:'Drone', sub:'Fotos e vídeos aéreos em parceria com @lucasdrone.sp.', img:'img/gabi/drone-controle.jpg',
+    itens:['Fotos e vídeos aéreos','Opção com vídeos em solo','Vídeos editados estilo reels'] }
+];
+
+const CATEGORIAS = [
+  ['retrato','Retrato pessoal'],['corporativo','Corporativo'],['gestante','Gestante'],
+  ['aniversario','Aniversário'],['casamentos','Casamentos'],['eventos','Música eletrônica'],['wellness','Wellness']
+];
+
+// botões de WhatsApp
+document.querySelectorAll('[data-zap]').forEach(a => {
+  a.href = linkZap(a.dataset.zap); a.target = '_blank'; a.rel = 'noopener';
+});
+
+// cards de serviço
+document.getElementById('cards').innerHTML = SERVICOS.map((s, i) => `
+  <article class="card rv">
+    <div class="img"><img src="${s.img}" alt="${s.titulo}" loading="lazy"></div>
+    <div class="corpo">
+      <span class="num">0${i + 1}.</span>
+      <h3>${s.titulo}</h3>
+      <p class="sub">${s.sub}</p>
+      <ul>${s.itens.map(t => `<li>${t}</li>`).join('')}</ul>
+      <a class="consultar" href="${linkZap(`Olá, Gabi! Vim pelo seu site e gostaria de saber os valores de ${s.titulo.toLowerCase()}.`)}" target="_blank" rel="noopener">Consultar valores</a>
+    </div>
+  </article>`).join('');
+
+// portfólio
+const POR_PAGINA = 12;
+const filtros = document.getElementById('filtros');
+const galeria = document.getElementById('galeria');
+const verMais = document.getElementById('ver-mais');
+let atual = [], mostrando = 0;
+
+filtros.innerHTML = CATEGORIAS.map(([id, nome], i) =>
+  `<button type="button" role="tab" data-cat="${id}" aria-selected="${i === 0}" class="${i === 0 ? 'ativo' : ''}">${nome}</button>`).join('');
+
+function abrirCategoria(cat) {
+  filtros.querySelectorAll('button').forEach(b => {
+    const on = b.dataset.cat === cat; b.classList.toggle('ativo', on); b.setAttribute('aria-selected', on);
+  });
+  const nome = CATEGORIAS.find(c => c[0] === cat)[1];
+  atual = (window.FOTOS[cat] || []).map(([arq, w, h]) => ({ thumb:`img/thumbs/${cat}/${arq}`, full:`img/fotos/${cat}/${arq}`, w, h, alt:`${nome}, foto de Gabi Monteiro` }));
+  galeria.innerHTML = ''; mostrando = 0; renderizar();
+}
+
+function renderizar() {
+  const frag = document.createDocumentFragment();
+  atual.slice(mostrando, mostrando + POR_PAGINA).forEach((f, k) => {
+    const i = mostrando + k;
+    const a = document.createElement('a');
+    a.href = f.full; a.dataset.i = i;
+    a.innerHTML = `<img src="${f.thumb}" width="${f.w}" height="${f.h}" alt="${f.alt}" loading="lazy">`;
+    a.addEventListener('click', e => { e.preventDefault(); abrirLb(i); });
+    frag.appendChild(a); obs.observe(a);
+  });
+  galeria.appendChild(frag);
+  mostrando = Math.min(mostrando + POR_PAGINA, atual.length);
+  verMais.parentElement.style.display = mostrando < atual.length ? '' : 'none';
+}
+
+filtros.addEventListener('click', e => { const b = e.target.closest('button'); if (b) abrirCategoria(b.dataset.cat); });
+verMais.addEventListener('click', renderizar);
+
+// lightbox
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img'), lbCont = lb.querySelector('.cont');
+let lbI = 0, toqueX = null;
+function abrirLb(i) { lbI = i; mostrarLb(); lb.classList.add('aberto'); document.body.style.overflow = 'hidden'; lb.querySelector('.fechar').focus(); }
+function mostrarLb() { const f = atual[lbI]; lbImg.src = f.full; lbImg.alt = f.alt; lbCont.textContent = `${lbI + 1} / ${atual.length}`; }
+function fecharLb() { lb.classList.remove('aberto'); document.body.style.overflow = ''; }
+function passo(d) { lbI = (lbI + d + atual.length) % atual.length; mostrarLb(); }
+lb.querySelector('.fechar').onclick = fecharLb;
+lb.querySelector('.ant').onclick = () => passo(-1);
+lb.querySelector('.prox').onclick = () => passo(1);
+lb.addEventListener('click', e => { if (e.target === lb) fecharLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('aberto')) return;
+  if (e.key === 'Escape') fecharLb(); if (e.key === 'ArrowLeft') passo(-1); if (e.key === 'ArrowRight') passo(1);
+});
+lb.addEventListener('touchstart', e => { toqueX = e.touches[0].clientX; }, { passive:true });
+lb.addEventListener('touchend', e => { if (toqueX === null) return; const dx = e.changedTouches[0].clientX - toqueX; if (Math.abs(dx) > 50) passo(dx < 0 ? 1 : -1); toqueX = null; });
+
+// animação ao rolar
+const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } }), { rootMargin:'0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// header e menu
+const header = document.getElementById('topo');
+const onScroll = () => header.classList.toggle('solido', scrollY > 30);
+addEventListener('scroll', onScroll, { passive:true }); onScroll();
+const menu = document.getElementById('menu'), menuBtn = document.querySelector('.menu-btn');
+menuBtn.onclick = () => { const a = menu.classList.toggle('aberto'); menuBtn.setAttribute('aria-expanded', a); };
+menu.addEventListener('click', e => { if (e.target.tagName === 'A') { menu.classList.remove('aberto'); menuBtn.setAttribute('aria-expanded', false); } });
+
+document.getElementById('ano').textContent = new Date().getFullYear();
+abrirCategoria('retrato');
+</script>
+</body>
+</html>
